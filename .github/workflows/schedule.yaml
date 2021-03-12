@@ -28,10 +28,19 @@ jobs:
         run: python main.py -v
           
       - name: success
-        if: failure()
+        if: success()
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: demo
           SLACK_COLOR: danger
           SLACK_TITLE: Death
           SLACK_MESSAGE: 'デモサイトが落ちてます。'
+
+      - name: success
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: demo
+          SLACK_COLOR: danger
+          SLACK_TITLE: Death
+          SLACK_MESSAGE: 'デモサイトが落ちてます。'          
