@@ -1,9 +1,11 @@
 name: Slack
 on:
+  push:
   schedule:
     - cron: '*/30 * * * *'
 env:
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+  SITE_URL: https://v4.eccube-plugin.net
 
 jobs:
   slack:

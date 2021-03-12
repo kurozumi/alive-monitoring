@@ -1,10 +1,11 @@
 import unittest
 import requests
+import os
 
 class Monitoring(unittest.TestCase):
 
     def setUp(self):
-        self.url = "https://v4.eccube-plugin.net"
+        self.url = os.environ['SITE_URL']
 
     def test(self):
         r = requests.get(self.url, allow_redirects=False)
