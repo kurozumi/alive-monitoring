@@ -2,7 +2,7 @@ import unittest
 import requests
 import os
 
-class Monitoring(unittest.TestCase):
+class AliveMonitoring(unittest.TestCase):
 
     def setUp(self):
         self.url = os.environ['SITE_URL']
