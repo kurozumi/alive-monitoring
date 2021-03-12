@@ -26,7 +26,7 @@ jobs:
       - name: Run
         run: python main.py -v
 
-     - name: Notify Slack
+      - name: Notify Slack
         if: failure()
         uses: rtCamp/action-slack-notify@v2
         env:
