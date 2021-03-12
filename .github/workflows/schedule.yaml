@@ -1,6 +1,5 @@
 name: Slack
 on:
-  push:
   schedule:
     - cron: '*/30 * * * *'
 env:
@@ -25,14 +24,6 @@ jobs:
 
       - name: Run
         run: python main.py -v
-
-      - name: success
-        if: success()
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_CHANNEL: demo
-          SLACK_TITLE: Life
-          SLACK_COLOR: good
           
       - name: success
         if: failure()
