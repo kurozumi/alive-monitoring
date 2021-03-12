@@ -1,6 +1,5 @@
 name: Slack
 on:
-  push:
   schedule:
     - cron: '*/30 * * * *'
 env:
