@@ -1,4 +1,4 @@
-name: Slack
+name: Alive Monitoring
 on:
   schedule:
     - cron: '*/30 * * * *'
@@ -12,7 +12,7 @@ env:
   ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
 
 jobs:
-  slack:
+  motitoring:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
