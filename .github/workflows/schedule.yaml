@@ -1,5 +1,6 @@
 name: Slack
 on:
+  push:
   schedule:
     - cron: '*/30 * * * *'
 env:
@@ -45,3 +46,4 @@ jobs:
         with:
           status: |
             デモサイトが落ちてます。
+            $SITE_URL
