@@ -46,4 +46,3 @@ jobs:
         with:
           status: |
             デモサイトが落ちてます。
-            ${{ SITE_URL }}
