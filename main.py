@@ -8,6 +8,7 @@ class Monitoring(unittest.TestCase):
         self.url = os.environ['SITE_URL']
 
     def test(self):
+        print(self.url)
         r = requests.get(self.url, allow_redirects=False)
         assert 200 == r.status_code, "{0} {1}".format(r.status_code, r.reason)
 
