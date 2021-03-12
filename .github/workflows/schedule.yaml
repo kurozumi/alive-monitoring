@@ -1,7 +1,7 @@
 name: Alive Monitoring
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '5 * * * *'
 env:
   SITE_URL: https://v4.eccube-plugin.net
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
